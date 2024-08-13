@@ -109,7 +109,7 @@ def get_data(
 
 def train_probe(probe, train_xs, train_labels, device="cpu") -> BaseProbe:
     if probe == "logistic":
-        model = LogisticProbe(normmalize=True, l2_penalty=1.0)
+        model = LogisticProbe(normalize=True, l2_penalty=1.0)
         model.fit(train_xs, train_labels)
     else:
         raise NotImplementedError(f"Invalid probe: {probe}")

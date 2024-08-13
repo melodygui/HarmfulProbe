@@ -24,7 +24,7 @@ class BaseProbe(ABC):
         raise NotImplementedError
    
     @abstractmethod
-    def got_concept_vectors(self):
+    def get_concept_vectors(self):
         """
             retreive latent representations of harmfulneess concept 
         """

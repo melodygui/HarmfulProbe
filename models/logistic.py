@@ -49,7 +49,7 @@ class LogisticProbe(BaseProbe):
         
         if xs.ndim == 4: # classifier over heads 
             self.ndims_ = 2
-        elif xs.ndim == 2:
+        elif xs.ndim == 2 or xs.ndim == 3:
             self.ndims_ = 1
         else:
             raise ValueError(f"Invalid input shape: {xs.shape}")
@@ -105,3 +105,5 @@ class LogisticProbe(BaseProbe):
             returns a 2D tensor stacked of all weight vectors
         """
         W = torch.stack([torch.from_numpy(clf.coef_[0]) for clf in self.clfs_], dim=0).to(torch.float32)
+        return W
+        

@@ -122,7 +122,7 @@ def compute_activations(
                         metrics["ce_loss"].append(np.nan)
 
                 if representation == "hiddens":
-                    reps = torch.cat([outputs.hidden_states[1:]]).squeeze(1)
+                    reps = torch.cat(outputs.hidden_states[1:]).squeeze(1)
                 else:
                     raise ValueError(f"Unknown representation: {representation}")
                 
