@@ -60,7 +60,7 @@ class LogisticProbe(BaseProbe):
         for i in tqdm.trange(xs.shape[-2], disable=not show_progress, smoothing = 0.01):
             clf = sklearn.linear_model.LogisticRegression(
                 fit_intercept=False,
-                solver="liblinear" if self.normalize else "lbfgs"
+                solver="liblinear" if self.normalize else "lbfgs",
                 penalty="l2" if self.l2_penalty > 0 else None,
                 C=1.0 / self.l2_penalty if self.l2_penalty > 0 else 1.0, # C : inverse of regularization strength
                 max_iter=300,

@@ -86,9 +86,8 @@ class CircuitBreakerDataset(Dataset):
         self.harmless_set += borderline_benign
         random.shuffle(self.harmless_set)
         print("borderline_benign[0]", borderline_benign[0])
-        print("Harmless set length:", len(self.
-        ))
-
+        print("Harmless set length:", len(self.harmless_set)
+              
         # ======================= Circuit Breaker ======================= #
         with open("data/circuit_breakers_train.json") as file:
             dataset = json.load(file)

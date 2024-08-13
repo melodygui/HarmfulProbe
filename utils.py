@@ -3,10 +3,9 @@ import random
 
 import torch
 
-# TODO : add dataset
+from toxic_completions import get_toxic_completions_messages
 from models.base import BaseProbe 
 from models.logistic import LogisticProbe
-from dataset import CircuitBreakerDataset
 
 def parse_dtype(dtype):
     if dtype == "float16":

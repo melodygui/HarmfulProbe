@@ -64,6 +64,7 @@ def parse_args():
     return args
 
 def main(args):
+    print("started training")
     torch.manual_seed(args.seed)
     np.random.seed(args.seed)
     random.seed(args.seed)
@@ -160,6 +161,6 @@ def main(args):
     print(f"Saved metrics to {outfile}")
 
 
-    if __name__ == "__main__":
-        args = parse_args()
-        main(args)
+if __name__ == "__main__":
+    args = parse_args()
+    main(args)

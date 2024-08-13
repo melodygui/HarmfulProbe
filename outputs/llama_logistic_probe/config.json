@@ -1,0 +1,17 @@
+{
+    "output_dir": "outputs/llama_logistic_probe",
+    "model": "meta-llama/Meta-Llama-3-8B-Instruct",
+    "concept": "compliance",
+    "probe": "logistic",
+    "representation": "hiddens",
+    "system_prompt": "",
+    "do_few_shot": false,
+    "ctx_len": 16,
+    "num_samples": 512,
+    "max_num_generate": 64,
+    "device": "auto",
+    "dtype": "float16",
+    "use_flash": false,
+    "seed": 42,
+    "cache_dir": null
+}
